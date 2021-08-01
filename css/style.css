@@ -28,7 +28,7 @@ body {
 
   .section-title{
     text-align: center;
-    font-size: 24px;
+    font-size: 2.0rem;
     margin-top: 30px;
     margin-bottom: 70px;
     font-family: 'Playfair Display', serif;
@@ -60,7 +60,7 @@ body {
   
   }
  #header li {
-  font-size: 1.125em;
+  font-size: 1.5rem;
   margin-left: 30px;
  }
  
@@ -111,7 +111,7 @@ body {
   padding:0;
   font-family: 'Playfair Display', serif;
   color: #24292e;
-  font-size: 3em;
+  font-size: 3.0rem;
  }
 
 
@@ -151,7 +151,7 @@ body {
 
 
 #about p{
-  font-size: 1.1em;
+  font-size: 1.125rem;
   line-height: 2.0;
   text-align: center;
 }
@@ -241,11 +241,11 @@ figure.hover-parent {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0,.5);
-    opacity: 0; 
+     opacity: 0; 
     color: #fff;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: left;
     padding: 30px;
    }
 
