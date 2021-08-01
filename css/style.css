@@ -1,0 +1,559 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+   
+}
+
+body {
+    color: #24292e;
+    background:#eee;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  li {
+    list-style: none;
+  }
+  .wrapper {
+    /* max-width: 960px; */
+    margin: 0 auto 130px auto;
+    font-size: 0.9rem;
+    padding: 0 4%;
+  }
+
+  .section-title{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    font-family: 'Playfair Display', serif;
+    
+   }
+
+  
+    /*HEADER
+    -------------------------------  */
+
+   
+  #header {
+    height: 60px;
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 4%;
+    position: relative;    
+  }
+  
+  #header .icon-logo {
+    width: 20px;
+   }
+
+   nav ul {
+  display: flex;
+  
+  }
+ #header li {
+  font-size: 1.125em;
+  margin-left: 30px;
+ }
+ 
+ #header li a{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none; 
+  color: #24292e;
+  font-family: 'Playfair Display', serif;
+ }
+
+ #header li a::after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 1px;
+   background-color: #ffcc00;
+   transform: translate(100%, 0);
+   transition: transform cubic-bezier(0.215,0.61,0.355,1)0.4s;
+ }
+
+ #header li a:hover::after {
+   transform: translate(0,0);
+ }
+
+ li {
+   margin: 10px 0;
+ }
+ 
+ /* MAINVISUAL--------------------
+  */
+  .mainvisual {
+    position: relative;
+     height: 200px;
+  }
+
+.name-logo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-family: 'Playfair Display', serif;
+  color: #24292e;
+  font-size: 3em;
+ }
+
+
+
+/* ABOUT----------------------------- */
+#about {
+  position: relative;
+}
+.about-box1 {
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+  width: 95%;
+  padding: 20px 30px;
+  box-shadow: 0 0 8px rgba(0, 0, 0,.5);
+  z-index: 1;
+  
+}
+
+.about-box2 {
+  position: absolute;
+  background-color: #ffcc00;
+  box-shadow: 0 0 8px rgba(0, 0, 0,.5);
+  width: 85%;
+  height: 100%;
+  top: -7%;
+  left: -.5%;
+  z-index: -1;
+}
+
+.about-phot img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 10%; 
+}
+
+
+#about p{
+  font-size: 1.1em;
+  line-height: 2.0;
+  text-align: center;
+}
+
+
+/* WORKS スライダーのためのcss
+---------------------------------- */
+
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+  max-width: 860px;
+   margin:0 auto;
+}
+
+.slider img {
+   width:100%;/*スライダー内の画像を横幅100%に*/
+   height:auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+   margin:0 10px;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+   position: absolute;/*絶対配置にする*/
+   top: 42%;
+   cursor: pointer;/*マウスカーソルを指マークに*/
+   outline: none;/*クリックをしたら出てくる枠線を消す*/
+   border-top: 2px solid #666;/*矢印の色*/
+   border-right: 2px solid #666;/*矢印の色*/
+   height: 15px;
+   width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+   left: -1.5%;
+   transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+   right: -1.5%;
+   transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+   text-align:center;
+ margin:20px 0 0 0;
+}
+
+.slick-dots li {
+   display:inline-block;
+ margin:0 5px;
+}
+
+.slick-dots button {
+   color: transparent;
+   outline: none;
+   width:8px;/*ドットボタンのサイズ*/
+   height:8px;/*ドットボタンのサイズ*/
+   display:block;
+   border-radius:50%;
+   background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+   background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+/* ホバーエフェクト */
+figure.hover-parent {
+   position: relative;
+   margin-bottom: 30px;
+   overflow: hidden;  
+}
+
+  figcaption.hover-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0,.5);
+    opacity: 0; 
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+   }
+
+  figure.hover-parent:hover figcaption.hover-mask {
+   opacity: 1;
+   transition:all 0.6s ease;
+  }
+
+  
+/* SKILLS
+----------------------------------- */
+.flex-icon {
+  display: flex;
+  justify-content: center;
+  
+  }
+ .skills-name {
+    font-weight: bold;
+    font-size: 1.125rem;
+  }
+
+#skills li {
+    margin:10px 30px;
+    
+}
+.html5{
+  color: #ffcc00;
+}
+.css3-alt {
+  color: #ff2599;
+}
+
+.wordpress {
+  color: #9944cc;
+}
+.js-square,.sass {
+  color: #00a9ff;
+}
+
+#skills li .jquery {
+  width: 100px;
+  height: 100px;
+}
+.skills-text {
+  font-weight: bold;
+  font-size: 1.0rem;
+  text-align: center;
+  padding: 50px;
+  
+}
+/* SERVICE
+----------------------------------------- */
+
+#service {
+  display: flex;
+  justify-items: auto;
+ }
+ .service-content {
+   margin-right: 50px;
+}
+ 
+
+.service-item img {
+  margin-bottom: 20px;
+  width: 100%;
+  
+}
+.service-title {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+
+}
+
+
+/* CONTACT
+---------------------------------------- */
+
+#contact button {
+  width: 200px;
+  margin: 0 auto;
+}
+
+
+
+
+
+/* FOOTER 
+--------------------------------------*/
+footer {
+
+  background-color: black;
+}
+footer p{
+  color: white;
+  font-size: 10px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#page_top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+
+
+.fa-arrow-circle-up {
+  color: #ffcc00;
+   
+ }
+/* モバイル
+------------------------------------------ */
+@media screen and (max-width:600px){
+  .wrapper {
+    margin-bottom: 80px;
+  }
+  .section-title {
+    margin-bottom: 40px; 
+  }
+
+  #about p, p{
+    font-size: 1.0em;
+  }
+
+  /* HEADER */
+  #header {
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .header-logo {
+    margin-top: 20px;
+  }
+   #header li {
+     margin-bottom: 20px;
+   }
+  #header li a {
+    font-size: 0.75em;
+  }
+ /* MAINVISUAL */
+ .mainvisual img {
+   width: 100%;
+   padding: 4%;
+ }
+ 
+ /* SKILLS */
+
+ #skills li {
+  margin:10px 15px;
+}
+
+ ul.flex-icon {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* SERVICE */
+#service {
+  flex-direction: column;
+}
+.service-content {
+   width: 100%;
+   margin-bottom: 50px;
+}
+.service-title {
+  font-size: 1.0em;
+}
+
+.service-item img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  margin-bottom: 20px;
+
+}
+
+ /* CONTACT */
+
+
+ #contact {
+   flex-direction: column;
+ }
+ #contact button {
+   font-size: 0.75em;
+ }
+ #contact  input[type="text"],
+ #contact  input[type="email"],
+ #contact textarea  {
+   width: 100%;
+ }
+}
+ 
+@media screen and (max-width:425px){
+  #contact button {
+    width: 200px !important;
+    font-size: 1.0em;
+  }
+}
+
+
+
+/* input.php
+---------------------------------------------- */
+
+#contact div {
+  margin-bottom: 14px;
+}
+
+#contact label {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+#contact  input[type="text"],
+#contact  input[type="email"],
+#contact textarea  {
+  
+  border: 1px #fff solid;
+  background-color: rgba(255, 255, 255,.5);
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#contact  input[type="text"],
+#contact  input[type="email"] {
+   width: 100%;  
+   max-width: 400px; 
+}
+
+#contact  textarea {
+  width: 100%;
+  max-width:600px;
+  height: 10rem;
+  margin-bottom: 50px;
+}
+
+
+#contact button{
+  width: 20%;
+  padding: 15px 0;
+  margin-top: 30px;
+  border-radius:50px;
+  background-color: black;
+  color: white;
+  display: block;
+  margin: 0 auto;
+}
+
+#contact button:hover {
+  background-color: white;
+  border: 1px black solid;
+  color: black;
+}
+/* confirm.php
+---------------------------------------------- */
+#confirm  {
+  background-color: rgba(255, 255, 255,.5);
+  border: 1px #fff solid;
+  padding: 15px ;
+}
+
+#confirm button {
+  margin-top: 50px;
+
+ }
+
+#confirm .btn-item {
+  display: flex;
+  
+}
+
+#confirm .btn-secondary {
+   margin-left: 26%;
+}
+
+#confirm .btn-success {
+    margin-right: 26%;
+}
+p.error, span.error {
+  display: block;
+  color: red;
+ text-align: left;
+  
+}
+ 
+
+/* thanks.php
+------------------------------------------------ */
+
+section .thanks_text {
+  text-align: center;
+  background-color: rgba(255, 255, 255,.5);
+  border: 1px #fff solid;
+  padding: 30px;
+  border-radius: 5px;
+  padding-bottom: 50px;
+  margin-bottom: 70px;
+}
+
+.thanks_text p{
+  margin-bottom: 30px;
+}
+
+.name-logo-contact {
+  font-family: 'Playfair Display', serif;
+  color: #24292e;
+  font-size: 3rem;
+}
+
